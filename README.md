@@ -1,8 +1,15 @@
 
 # teamsystem-backend-demo
-# TeamSystem Backend Sample (FastAPI)
 
-A minimal FastAPI backend service with health check endpoint and test coverage.
+## TeamSystem Backend Sample (FastAPI)
+
+A minimal FastAPI backend service demonstrating:
+- Health check endpoint
+- Simple CRUD-style items endpoints
+- Pytest test coverage
+- Clean project structure
+
+---
 
 ## Tech Stack
 - Python 3.11
@@ -10,20 +17,30 @@ A minimal FastAPI backend service with health check endpoint and test coverage.
 - Uvicorn
 - Pytest
 
+---
+
 ## API Endpoints
 
-- GET /health  
+- **GET /health**  
   Health check endpoint
 
-- GET /items  
+- **GET /items**  
   Returns item list
 
-- POST /items  
+- **POST /items**  
   Creates a new item
 
+---
 
-## Run locally
+## Setup
+
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+pytest
+
 source .venv/bin/activate
 uvicorn app.main:app --reload --port 8000
 
